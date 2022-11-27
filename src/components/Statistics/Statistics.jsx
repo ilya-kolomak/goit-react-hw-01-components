@@ -3,8 +3,8 @@ import { StatisticsCard, Title, StatList, StatItem, StatsDescription } from './S
 
 export const Statistics = ({title, stats: data}) => {
     return ( <StatisticsCard>
-     {title !== undefined && <Title>{title}</Title>} 
-  
+      {title && <Title>{title}</Title>}  
+
     <StatList>
         {data.map(({id, label, percentage}) => {
            return <StatItem key={id} label={label}>
